@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "9f74312c-433d-4e81-a25a-c6ae59443a30",
+		"name": "Integra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Key",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"integraId\": \"1234567890123456\",\r\n    \"keyValue\": \"encoded Key Vallue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/registerKey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"registerKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"integraId\": \"1234567890123456\",\r\n    \"amount\": 200,\r\n    \"issue\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/addToken",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redeem Tokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"issueTxnId\": \"9677ece86aafe899fe4d8c6bedaf3061611cec7f4db2d0e5c963a1083a65fc96\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/redeemIssue",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"redeemIssue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Identity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"$class\": \"com.integraledger.identityregistry.RegisterIdentity\",\r\n    \"integraId\": \"test\",\r\n    \"recordId\": \"12345\",\r\n    \"identityType\": \"com.integraledger.lmatid\",\r\n    \"value\": \"A31FE9656FC8Dd3A459E623DC8204Edd6D0268F8DdF56D734DAC3CA3262EDB5DB889\",\r\n    \"metaData\": \"test4 MetaData\",\r\n    \"opt1\": \"11\",\r\n    \"opt2\": \"22\",\r\n    \"opt3\": \"333\",\r\n    \"transactionId\": \"4b5f6326d4b6a31cdda076afc771557393135783936e8f3170c18560bad04801\",\r\n    \"integraPublicKeyId\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/registerIdentity",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"registerIdentity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Key by Owner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/keyforowner/123456789012345",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"keyforowner",
+						"123456789012345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Identity Ecxists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/identityexists/test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"identityexists",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/valueexists/A31FE9656FC8Dd3A459E623DC8204Edd6D0268F8DdF56D734DAC3CA3262EDB5DB889",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"valueexists",
+						"A31FE9656FC8Dd3A459E623DC8204Edd6D0268F8DdF56D734DAC3CA3262EDB5DB889"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MetaData Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/metadataexists/11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"metadataexists",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Record Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/recordexists/12345",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"recordexists",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Otp1 Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/opt1exists/11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"opt1exists",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Opt2 Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/opt2exists/22",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"opt2exists",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Opt 3 Exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/opt3exists/333",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"opt3exists",
+						"333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Key for Owner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/keyforowner/6b21f70d-d35a-c5cc-98c6-26c77146b787",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"keyforowner",
+						"6b21f70d-d35a-c5cc-98c6-26c77146b787"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token History for Owner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/tokenhistoryforowner/1234567890123456",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tokenhistoryforowner",
+						"1234567890123456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
